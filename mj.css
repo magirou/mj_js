@@ -1,0 +1,288 @@
+body {
+    background-color: #054530;
+    user-select: none;
+    font-family: sans-serif;
+    touch-action: manipulation;
+}
+
+.header{
+    display:flex;
+}
+
+.hand{
+    height: calc(min(6vw,50px) + calc(5vw/66*90) + 5px);
+}
+
+.pai{
+    aspect-ratio:66/90;
+    width:max(5vw,25px);
+    height:100%;
+    background-size:contain;
+    position: relative;
+}
+
+.pai_img{
+    width:max(5vw,25px);
+    position:relative;
+}
+
+.cursor{
+    width:max(5vw,25px);
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.pai_numpad{
+    display: flex;
+    background-color: white;
+    text-align: center;
+    width:max-content;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.pai_numpad_close{
+    border: 0;
+    background-color: white;
+    font-size: 2em;
+}
+
+.naki_name{
+    height:min(6vw,50px);
+    font-size: min(4vw,2.5em);
+    background-color:white;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+
+.naki_button{
+    float:right;
+    width: auto;
+    min-width: 200px;
+    max-width: 450px;
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+.naki{
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    aspect-ratio: unset;
+    white-space: nowrap;
+}
+
+.naki_add_button{
+    margin-top:3vh;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    width:max(4em,90px);
+    height:3em;
+    font-size: 1em;
+    border-radius: 5px;
+    color:black;
+}
+
+.pai_popover{
+    background-color: white;
+    text-align: center;
+}
+
+#space{
+    text-align: right;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+input[type=radio]{
+    display:none;
+}
+
+input[type=checkbox]{
+    display:none;
+}
+
+label:has(input:checked){
+    background: skyblue;
+}
+
+.conditions{
+    display:flex;
+    flex-direction: column;
+    font-size: 1.5em;
+    background: white;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.conditions_checkbox{
+    clear:both;
+}
+
+.conditions_checkbox label{
+    background: gray;
+    display:block;
+    float:left;
+    cursor:pointer;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.conditions_radios{
+   clear:both;
+}
+
+.conditions_radios label{
+    background: gray;
+    display:block;
+    float:left;
+    cursor:pointer;
+    margin: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+    border-right: 1px solid black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.conditions_radios label:first-of-type{
+    border-radius: 5px 0 0 5px;
+}
+
+.conditions_radios label:last-of-type{
+    border-radius: 0 5px 5px 0;
+    border-right:0;
+}
+
+.conditions_number{
+    margin-top :5px;
+    margin-bottom: 5px;
+    height:2em;
+    align-items: center;
+    display: flex;
+}
+
+.conditions_number_div{
+    height:100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 1em;
+    text-align: center;
+    font-size: 1em;
+    vertical-align: middle;
+    background-color: lightgray;
+    float:left;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.conditions_number_button{
+    height:100%;
+    border: 0;
+    float: left;
+    background-color: lightgray;
+    vertical-align: middle;
+    cursor: pointer;
+    line-height: 2em;
+    padding-left: 10px;
+    padding-right:10px;
+}
+
+.button_left{
+    border-radius: 5px 0 0 5px;
+    margin-left: 10px;
+}
+
+.button_right{
+    border-radius: 0 5px 5px 0;
+    margin-right: 10px;
+}
+
+.calc_button{
+    font-size: 1em;
+    line-height:1.5em;
+    border-radius: 5px;
+    background-color: darkorange;
+    color:black;
+}
+
+.reset_button{
+    margin-left: 50px;
+    font-size: 1em;
+    line-height:1.5em;
+    border-radius: 5px;
+    background-color: lightcyan;
+    color:black;
+}
+
+#dora{
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.dora{
+    display: flex;
+    flex-direction: column;
+}
+
+.dora_pai{
+    display: flex;
+    flex-direction: row;
+}
+
+.dora_text{
+    text-align: right;
+    font-size: 1.2em;
+    width:5em;
+    color: white;
+    line-height: max(calc(5vw/66*90),calc(25px/66*90));
+}
+
+.pai_dora{
+    aspect-ratio:66/90;
+    width:max(4vw,25px);
+    height:100%;
+    background-size:contain;
+    position: relative;
+}
+
+.pai_img_dora{
+    width:max(4vw,25px);
+    position:relative;
+}
+
+.cursor_dora{
+    width:max(4vw,25px);
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.result_modal{
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+.modal_close_button{
+    color:black;
+    line-height: 2em;
+}
+
+.pai_modal{
+    height:2em;
+}
