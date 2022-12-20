@@ -286,3 +286,7 @@ label:has(input:checked){
 .pai_modal{
     height:2em;
 }
+
+.all_pai{
+    width:1px;
+}
