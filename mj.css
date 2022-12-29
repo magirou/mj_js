@@ -9,7 +9,7 @@ body {
     display:flex;
 }
 
-.hand{
+#hand{
     height: calc(min(6vw,50px) + calc(5vw/66*90) + 5px);
 }
 
@@ -24,6 +24,10 @@ body {
 .pai_img{
     width:max(5vw,25px);
     position:relative;
+}
+
+.pai_numpad_img{
+    width:clamp(25px, 8vw, 70px)
 }
 
 .cursor{
@@ -48,6 +52,7 @@ body {
     border: 0;
     background-color: white;
     font-size: 2em;
+    padding:5px;
 }
 
 .naki_name{
@@ -62,7 +67,7 @@ body {
 .naki_button{
     float:right;
     width: auto;
-    min-width: 200px;
+    min-width: 190px;
     max-width: 450px;
     margin-top: auto;
     margin-bottom: 10px;
@@ -76,7 +81,7 @@ body {
 }
 
 .naki_add_button{
-    margin-top:3vh;
+    margin-top:5px;
     margin-left: 0.5vw;
     margin-right: 0.5vw;
     width:max(4em,90px);
@@ -112,7 +117,7 @@ label:has(input:checked){
 .conditions{
     display:flex;
     flex-direction: column;
-    font-size: 1.5em;
+    font-size: min(1.5em,4vw);
     background: white;
     width: max-content;
     margin-left: auto;
@@ -202,6 +207,15 @@ label:has(input:checked){
     padding-right:10px;
 }
 
+@keyframes button_tap_color{
+    0% {background-color: gray;}
+    100% {background-color: lightgray;}
+}
+
+.conditions_number_button:active{
+    animation: button_tap_color 0.2s;
+}
+
 .button_left{
     border-radius: 5px 0 0 5px;
     margin-left: 10px;
@@ -289,4 +303,51 @@ label:has(input:checked){
 
 .all_pai{
     width:1px;
+}
+
+label.toggle_label{
+    width: 70px;
+    height: 30px;
+    background: #ccc;
+    position: relative;
+    display: inline-block;
+    transition: 0.2s;
+    box-sizing: border-box;
+    margin: 5px;
+    cursor: pointer;
+}
+
+label.toggle_label::after{
+    content:'';
+    position:absolute;
+    width: 30px;
+    height: 30px;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background: #fff;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+input.toggle_input:checked + label{
+    background-color: #4BD865;
+}
+
+input.toggle_input:checked + label::after{
+    left: 40px;
+}
+
+.header_right{
+    display: flex;
+    flex-direction: column;
+}
+
+.sanma_switch{
+    margin-top:0;
+    margin-bottom:auto;
+    margin-left:auto;
+    display: flex;
+    align-items: center;
+    color: white;
 }
