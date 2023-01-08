@@ -5,6 +5,14 @@ body {
     touch-action: manipulation;
 }
 
+img:not(.img_blank){
+    cursor: pointer;
+}
+
+button{
+    cursor: pointer;
+}
+
 .header{
     display:flex;
 }
@@ -24,6 +32,15 @@ body {
 .pai_img{
     width:max(5vw,25px);
     position:relative;
+}
+
+@keyframes pai_img_tap{
+    0% {opacity: 0%;}
+    100% {opacity: 100%}
+}
+
+.pai_numpad_img:active{
+    animation: pai_img_tap 0.2s;
 }
 
 .pai_numpad_img{
@@ -62,6 +79,7 @@ body {
     text-align: center;
     vertical-align: middle;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .naki_button{
