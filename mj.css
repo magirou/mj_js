@@ -18,7 +18,7 @@ button{
 }
 
 #hand{
-    height: calc(min(6vw,50px) + calc(5vw/66*90) + 5px);
+    height: calc(min(6vw,50px) + calc(5vw/66*90) + 25px);
 }
 
 .pai{
@@ -35,12 +35,12 @@ button{
 }
 
 @keyframes pai_img_tap{
-    0% {opacity: 0%;}
-    100% {opacity: 100%}
+    0% {filter: brightness(0.5);}
+    100% {filter: brightness(1);}
 }
 
-.pai_numpad_img:active{
-    animation: pai_img_tap 0.2s;
+.pai_numpad_anim{
+    animation: pai_img_tap 0.1s;
 }
 
 .pai_numpad_img{
@@ -114,10 +114,8 @@ button{
     text-align: center;
 }
 
-#space{
-    text-align: right;
-    margin-top: 1vh;
-    margin-bottom: 1vh;
+#sort{
+    position: absolute;
 }
 
 input[type=radio]{
@@ -368,4 +366,16 @@ input.toggle_input:checked + label::after{
     display: flex;
     align-items: center;
     color: white;
+}
+
+.sort_button{
+    position: relative;
+    top: calc((max(5vw,25px) / 66 * 90) + 8px);
+    height: min(6vw,40px);
+    font-size: min(3vw,1.5em);
+    border-radius: 5px;
+}
+
+img{
+    -webkit-user-drag: none;
 }
