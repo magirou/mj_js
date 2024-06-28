@@ -232,6 +232,19 @@ label:has(input:checked){
     animation: button_tap_color 0.2s;
 }
 
+div.conditions_switch_descr{
+    position: relative;
+    display: flex;
+    margin: 0.5vw;
+}
+
+div.conditions_switch{
+    position: relative;
+    display: flex;
+    margin: 0.5vw;
+    width: 100px;
+}
+
 .button_left{
     border-radius: 5px 0 0 5px;
     margin-left: 10px;
@@ -324,13 +337,14 @@ label:has(input:checked){
 label.toggle_label{
     width: 70px;
     height: 30px;
-    background: #ccc;
+    background: #999;
     position: relative;
     display: inline-block;
     transition: 0.2s;
     box-sizing: border-box;
     margin: 5px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 label.toggle_label::after{
@@ -341,9 +355,10 @@ label.toggle_label::after{
     left: 0;
     top: 0;
     z-index: 2;
-    background: #fff;
+    background: #ddd;
     transition: 0.2s;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 input.toggle_input:checked + label{
@@ -359,13 +374,39 @@ input.toggle_input:checked + label::after{
     flex-direction: column;
 }
 
-.sanma_switch{
+.options_div{
     margin-top:0;
     margin-bottom:auto;
     margin-left:auto;
     display: flex;
     align-items: center;
     color: white;
+}
+
+.options_button{
+    width: 40px;
+    height: 40px;
+    background-position: center center;
+    background: transparent;
+    border: 0px;
+    margin-right: 1vw;
+}
+
+.options_descr_div{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.options_description{
+    padding-left: 1em;
+    font-size: 0.6em;
+}
+
+.options_grid{
+    display: grid;
+    grid-template-columns: auto 100px;
+    width: 25vw;
 }
 
 .sort_button{
