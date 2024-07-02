@@ -212,7 +212,7 @@ label:has(input:checked){
 }
 
 .conditions_number_button{
-    height:100%;
+    height: 2em;
     border: 0;
     float: left;
     background-color: lightgray;
@@ -243,11 +243,14 @@ div.conditions_switch{
     display: flex;
     margin: 0.5vw;
     width: 100px;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .button_left{
     border-radius: 5px 0 0 5px;
-    margin-left: 10px;
+    /*margin-left: 10px;*/
 }
 
 .button_right{
@@ -374,6 +377,21 @@ input.toggle_input:checked + label::after{
     flex-direction: column;
 }
 
+@media (min-width: 880px){
+    .options_outer_div{
+        width: 800px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 400px);
+    }
+}
+
+@media (max-width: 879px){
+    .options_outer_div{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+    }
+}
+
 .options_div{
     margin-top:0;
     margin-bottom:auto;
@@ -381,6 +399,7 @@ input.toggle_input:checked + label::after{
     display: flex;
     align-items: center;
     color: white;
+    word-break: keep-all;
 }
 
 .options_button{
@@ -390,6 +409,16 @@ input.toggle_input:checked + label::after{
     background: transparent;
     border: 0px;
     margin-right: 1vw;
+
+}
+
+@keyframes options_button_anim{
+    0% {opacity: 20%;}
+    100% {opacity: 100%;}
+}
+
+.options_button:active{
+    animation: options_button_anim 0.4s;
 }
 
 .options_descr_div{
@@ -405,8 +434,7 @@ input.toggle_input:checked + label::after{
 
 .options_grid{
     display: grid;
-    grid-template-columns: auto 100px;
-    width: 25vw;
+    grid-template-columns: minmax(200px, 300px) 100px;
 }
 
 .sort_button{
