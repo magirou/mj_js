@@ -109,6 +109,15 @@ button{
     color:black;
 }
 
+.option_preset_button{
+    vertical-align: middle;
+    height: min(4vw,50px);
+    width: max(6vw,60px);
+    font-size: min(1vw,1em);
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
 .pai_popover{
     background-color: white;
     text-align: center;
